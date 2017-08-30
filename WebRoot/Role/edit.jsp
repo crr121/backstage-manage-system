@@ -76,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         });
 
 		$('#backid').click(function(){
-				window.location.href="index.jsp";
+				window.location.href="Role/index.jsp";
 		 });
 
     });

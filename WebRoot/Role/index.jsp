@@ -60,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td>管理员</td>
             <td>1</td>
             <td>
-                  <a href="edit.jsp">编辑</a>
+                  <a href="Role/edit.jsp">编辑</a>
                   
             </td>
         </tr></table>
@@ -68,9 +68,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script>
     $(function () {
         
-		$('#addnew').click(function(){
+		$("#addnew").click(function(){
 
-				window.location.href="add.jsp";
+				window.location.href="Role/add.jsp";
 		 });
 
 
@@ -83,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if(confirm("确定要删除吗？"))
 		{
 		
-			var url = "index.jsp";
+			var url = "Role/index.jsp";
 			
 			window.location.href=url;		
 		

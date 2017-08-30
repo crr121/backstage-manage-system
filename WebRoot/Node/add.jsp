@@ -40,10 +40,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <form action="index.jsp" method="post">
+  <form action="nodeAddServlet.do" method="post">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
-        <td width="10%" class="tableleft">机构号</td>
+        <td width="10%" class="tableleft" >机构号</td>
         <td><input type="text" name="grouptitle"/></td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="index.jsp";
+				window.location.href="Node/index.jsp";
 		 });
 
     });

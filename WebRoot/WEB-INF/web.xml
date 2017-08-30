@@ -5,15 +5,24 @@
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>com.cr.servlet.LoginServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>NodeAddServlet</servlet-name>
+    <servlet-class>com.cr.servlet.NodeAddServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/loginServlet.do</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NodeAddServlet</servlet-name>
+    <url-pattern>/nodeAddServlet.do</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>Public/login.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>

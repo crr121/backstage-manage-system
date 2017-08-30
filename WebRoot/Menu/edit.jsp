@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form action="index.jsp" method="post" class="definewidth m20">
+    <form action="Menu/index.jsp" method="post" class="definewidth m20">
 <input type="hidden" name="id" value="{$menu.id}" />
 <table class="table table-bordered table-hover m10">
     <tr>
@@ -90,7 +90,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="index.jsp";
+				window.location.href="Menu/index.jsp";
 		 });
 
     });

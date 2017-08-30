@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>菜单标题</th>
+        <th>模块管理</th>
         <th>GROUP</th>
         <th>MODEL</th>
         <th>ACTION</th>
@@ -60,46 +60,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </thead>
 	     <tr>
             <td colspan="5">系统管理</td>
-            <td><a href="edit.jsp">编辑</a></td>
+            <td><a href="Menu/edit.jsp">编辑</a></td>
         </tr>
         <tr>
-                <td>机构管理</td>
+                <td>部门管理</td>
                 <td>Admin</td>
                 <td>Merchant</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>权限管理</td>
                 <td>Admin</td>
                 <td>Node</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>角色管理</td>
                 <td>Admin</td>
                 <td>Role</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>用户管理</td>
                 <td>Admin</td>
                 <td>User</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>菜单管理</td>
                 <td>Admin</td>
                 <td>Menu</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
             <td colspan="5">明信片管理</td>
-            <td><a href="edit.jsp">编辑</a></td>
+            <td><a href="Menu/edit.jsp">编辑</a></td>
         </tr>
         <tr>
                 <td>批次管理</td>
@@ -107,21 +107,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <td>LabelSet</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>明信片查询</td>
                 <td>Admin</td>
                 <td>Label</td>
                 <td>index</td>
                 <td>0</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr><tr>
                 <td>明信片生成</td>
                 <td>Admin</td>
                 <td>Label</td>
                 <td>apply</td>
                 <td>1</td>
-                <td><a href="edit.jsp">编辑</a></td>
+                <td><a href="Menu/edit.jsp">编辑</a></td>
             </tr></table>
 
   </body>
@@ -131,7 +131,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		$('#addnew').click(function(){
 
-				window.location.href="add.jsp";
+				window.location.href="Menu/add.jsp";
 		 });
 
 
