@@ -75,7 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     $(function () {
         
 
-		$('#addnew').click(function(){
+		$("#addnew").click(function(){
 
 				window.location.href="add.jsp";
 		 });
