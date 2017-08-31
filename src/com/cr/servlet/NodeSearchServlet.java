@@ -26,7 +26,7 @@ public class NodeSearchServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 			
-		System.out.println("--");
+		
 		//解决乱码
 				req.setCharacterEncoding("utf-8");
 				resp.setCharacterEncoding("utf-8");
@@ -41,7 +41,7 @@ public class NodeSearchServlet extends HttpServlet {
 				//组装成JSON数据
 				String departInfo = new Gson().toJson(departs);
 				
-				System.out.println(departInfo);
+				
 				resp.setContentType("text/json");
 				PrintWriter out = resp.getWriter();
 				out.print(departInfo);

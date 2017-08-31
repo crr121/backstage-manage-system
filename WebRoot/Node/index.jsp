@@ -43,12 +43,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  
+  <form class="form-inline definewidth m20" > 
      部门名称：
    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
    <button type="submit" class="btn btn-primary" onclick="sendNodeAjax();" id="nodeSearch">查询</button>&nbsp;&nbsp; 
    <button type="button" class="btn btn-success" id="addnew">添加部门</button>
-
+   
+</form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
@@ -63,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td>5</td>
             <td>管理员</td>
             <td>1</td>
-            <td><a href="Node/edit.jsp">编辑</a> </td>
+            <td><a href="Node/edit.jsp">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a> </td>
          </tr>
     </tbody>
 </table>

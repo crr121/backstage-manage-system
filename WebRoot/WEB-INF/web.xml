@@ -13,6 +13,11 @@
     <servlet-name>NodeSearchServlet</servlet-name>
     <servlet-class>com.cr.servlet.NodeSearchServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>NodeDelServlet</servlet-name>
+    <servlet-class>com.cr.servlet.NodeDelServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -27,6 +32,10 @@
   <servlet-mapping>
     <servlet-name>NodeSearchServlet</servlet-name>
     <url-pattern>/nodeSearchServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NodeDelServlet</servlet-name>
+    <url-pattern>/nodeDelServlet</url-pattern>
   </servlet-mapping>
   
   

@@ -14,10 +14,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" type="text/css" href="Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="Css/style.css" />
     <script type="text/javascript" src="Js/jquery.js"></script>
-    <script type="text/javascript" src="Js/jquery.sorted.js"></script>
+     <script type="text/javascript" src="Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="Js/bootstrap.js"></script>
     <script type="text/javascript" src="Js/ckform.js"></script>
     <script type="text/javascript" src="Js/common.js"></script>
+    <script type="text/javascript" src="MyJs/roleIndex.js"></script>
+    <script type="text/javascript" src="MyJs/jquery-1.8.3.js"></script>
 
     <style type="text/css">
         body {
@@ -41,11 +43,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form class="form-inline definewidth m20" action="Role/index.jsp" method="get">  
+    
     角色名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增角色</button>
-</form>
+    <button type="submit" class="btn btn-primary" id="roleSearch">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" onclick="roleSearch();">新增角色</button>
+
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>

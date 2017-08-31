@@ -64,4 +64,28 @@ public class DepartDAO {
 		}
 		return departs;
 	}
+	
+	/**
+	 * 删除部门
+	 * @param departId
+	 * @throws SQLException 
+	 */
+	public boolean delDepart(int departId) throws SQLException{
+		boolean flg = false;
+		String sql = "delete from tb_depart where departId = ?";
+		 try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, departId);
+			 flg = ps.executeUpdate()>0;
+			 return flg;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			ps.close();
+			con.close();
+		}
+		 return false;
+		
+	}
+
 }

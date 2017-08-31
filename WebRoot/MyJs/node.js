@@ -8,7 +8,7 @@ function sendNodeAjax(){
 			$(".nodeBody").append("<tr><td>"+depart.departId+"</td>" +
 					"<td>"+depart.departName+"</td>" +
 							"<td>"+depart.departState+"</td>" +
-									"<td href='Node/edit.jsp'>编辑</td></tr>");
+									"<td ><a href='Node/edit.jsp'>修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='#'>删除</a></td></tr>");
 		});
 	},"json");
 	//clickNodeSearch();

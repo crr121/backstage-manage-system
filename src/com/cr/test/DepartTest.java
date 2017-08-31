@@ -18,4 +18,11 @@ public class DepartTest {
 		depart.setDepartState(1);
 		dd.saveDepart(depart);
 	}
+	
+	//删除部门
+	@Test
+	public void testDelDepart() throws SQLException{
+		boolean flg = dd.delDepart(2444);
+		System.out.println(flg);
+	}
 }
