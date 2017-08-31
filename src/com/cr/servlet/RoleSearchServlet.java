@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.cr.dao.DepartDAO;
-import com.cr.entity.Depart;
+import com.cr.dao.RoleDAO;
+import com.cr.entity.Role;
 import com.google.gson.Gson;
 
-public class NodeSearchServlet extends HttpServlet {
+public class RoleSearchServlet extends HttpServlet {
 
+	
 	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -25,30 +27,29 @@ public class NodeSearchServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+			//解决乱码
+			req.setCharacterEncoding("utf-8");
+			resp.setCharacterEncoding("utf-8");
 			
-		
-				//解决乱码
-				req.setCharacterEncoding("utf-8");
-				resp.setCharacterEncoding("utf-8");
-				
-				//获取页面传递的参数
-				String s = req.getParameter("rolename");
-				
-				//调用nodesearch
-			DepartDAO dd = 	new DepartDAO();
+			//获取页面传递的参数
+			String s = req.getParameter("rolename");
+			
+			//调用rolesearch
+			RoleDAO rd = new RoleDAO();
 			try {
-				List<Depart> departs = dd.searchDepart(s);
+				List<Role> roles = rd.searchRole(s);
 				//组装成JSON数据
-				String departInfo = new Gson().toJson(departs);
-				
+				String roleInfo = new Gson().toJson(roles);
 				
 				resp.setContentType("text/json");
 				PrintWriter out = resp.getWriter();
-				out.print(departInfo);
+				out.print(roleInfo);
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+			
 	}
-
+	
+	
 }

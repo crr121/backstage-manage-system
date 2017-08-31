@@ -30,9 +30,15 @@ function clickNodeSearch(){
 */
 
 function clickNodeId(){
-	alert(this.innerHTML);
+//	alert(121);
+//	alert(this.innerHTML);
 //	alert(document.getElementById("nodeid").innerHTML);
 //	alert($("#nodeid").text());
+//	alert($(this).parent().prev().text());
+//	alert($("#nodeid").prev().text());
+//	alert($("#nodeid").parentNode.firstChild.text());
+	
+	alert($("#nodeid").parent().text());
 }
 
 

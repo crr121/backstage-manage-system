@@ -17,6 +17,16 @@
     <servlet-name>NodeDelServlet</servlet-name>
     <servlet-class>com.cr.servlet.NodeDelServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>RoleAddServlet</servlet-name>
+    <servlet-class>com.cr.servlet.RoleAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RoleSearchServlet</servlet-name>
+    <servlet-class>com.cr.servlet.RoleSearchServlet</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -36,6 +46,14 @@
   <servlet-mapping>
     <servlet-name>NodeDelServlet</servlet-name>
     <url-pattern>/nodeDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoleAddServlet</servlet-name>
+    <url-pattern>/roleAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoleSearchServlet</servlet-name>
+    <url-pattern>/roleSearchServlet.do</url-pattern>
   </servlet-mapping>
   
   

@@ -13,8 +13,9 @@ public class RoleTest {
 	@Test
 	public  void testSave() throws SQLException{
 		Role role = new Role();
-		role.setRoleId(110);
-		role.setRoleName("部门经理");
+//		role.setRoleId(110);
+//		role.setRoleId(roleId);
+		role.setRoleName("班长");
 		role.setRoleState(1);
 		role.setRoleRight("用户管理");
 		rd.saveRole(role);

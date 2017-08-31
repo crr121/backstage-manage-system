@@ -20,6 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="Js/common.js"></script>
     <script type="text/javascript" src="MyJs/roleIndex.js"></script>
     <script type="text/javascript" src="MyJs/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="MyJs.role.js"></script>
 
     <style type="text/css">
         body {
@@ -46,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     角色名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary" id="roleSearch">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" onclick="roleSearch();">新增角色</button>
+    <button type="submit" class="btn btn-primary" id="roleSearch" onclick="sendRoleAjax();">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" onclick="roleSearch();">新增角色</button>
 
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
@@ -57,15 +58,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th>操作</th>
     </tr>
     </thead>
-	     <tr>
+    
+    <tbody class="nodeBody">
+    	<tr>
             <td>5</td>
             <td>管理员</td>
             <td>1</td>
-            <td>
-                  <a href="Role/edit.jsp">编辑</a>
-                  
-            </td>
+            <td><a href="Role/edit.jsp">编辑</a></td>
         </tr></table>
+    </tbody>
+	     
   </body>
   <script>
     $(function () {

@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th id=''>部门编号</th>
+        <th >部门编号</th>
         <th>部门名称</th>
         <th>状态</th>
         <th>管理操作</th>
@@ -61,10 +61,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </thead>
     <tbody class="nodeBody">
    		<tr>
-             <td >5</td>
+            <td >5</td>
             <td>管理员</td>
             <td>1</td>
-            <td ><a href="Node/edit.jsp" onclick="clickNodeId();">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Node/index.jsp"   >删除</a> </td> 
+            <td id="nodeid"><a href="Node/edit.jsp" onclick="clickNodeId();">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Node/index.jsp"   >删除</a> </td> 
          </tr>
     </tbody>
 </table>
