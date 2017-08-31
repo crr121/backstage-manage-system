@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form class="form-inline definewidth m20" action="index.jsp" method="get">  
+    <form class="form-inline definewidth m20" action="Role/index.jsp" method="get">  
     角色名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增角色</button>
@@ -68,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script>
     $(function () {
         
-		$("#addnew").click(function(){
+		$('#addnew').click(function(){
 
 				window.location.href="Role/add.jsp";
 		 });
