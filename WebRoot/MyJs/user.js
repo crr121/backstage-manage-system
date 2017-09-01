@@ -7,7 +7,7 @@ function sendRoleAjax(){
 	alert(data);*/
 		$.each(data,function(index,role){
 //			alert(12);
-			$("#userRole").append(" <li><label class='checkbox inline'><input type='checkbox' name='roleGroup[]' value="+role.roleRight+" id='list1' onclick='test();'/>"+role.roleName+"</label>");
+			$("#userRole").append(" <li><label class='checkbox inline'><input type='checkbox' name='roleGroup[]' value="+role.roleId+" id='list1' onclick='test();'/>"+role.roleName+"</label>");
 		});
 	},"json");
 

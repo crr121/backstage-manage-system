@@ -8,7 +8,7 @@ public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private int  userId;
 	private int departId;
-	private int roleId;
+	private String roleIds;
    private String userName;
    private String userPwd;
    private String userRealname;
@@ -20,13 +20,13 @@ public User() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public User(int userId, int departId, int roleId, String userName,
+public User(int userId, int departId, String roleIds, String userName,
 		String userPwd, String userRealname, String userEmail, String userSex,
 		int userState, Date lastLogin) {
 	super();
 	this.userId = userId;
 	this.departId = departId;
-	this.roleId = roleId;
+	this.roleIds = roleIds;
 	this.userName = userName;
 	this.userPwd = userPwd;
 	this.userRealname = userRealname;
@@ -37,8 +37,8 @@ public User(int userId, int departId, int roleId, String userName,
 }
 @Override
 public String toString() {
-	return "User [userId=" + userId + ", departId=" + departId + ", roleId="
-			+ roleId + ", userName=" + userName + ", userPwd=" + userPwd
+	return "User [userId=" + userId + ", departId=" + departId + ", roleIds="
+			+ roleIds + ", userName=" + userName + ", userPwd=" + userPwd
 			+ ", userRealname=" + userRealname + ", userEmail=" + userEmail
 			+ ", userSex=" + userSex + ", userState=" + userState
 			+ ", lastLogin=" + lastLogin + "]";
@@ -49,7 +49,7 @@ public int hashCode() {
 	int result = 1;
 	result = prime * result + departId;
 	result = prime * result + ((lastLogin == null) ? 0 : lastLogin.hashCode());
-	result = prime * result + roleId;
+	result = prime * result + ((roleIds == null) ? 0 : roleIds.hashCode());
 	result = prime * result + ((userEmail == null) ? 0 : userEmail.hashCode());
 	result = prime * result + userId;
 	result = prime * result + ((userName == null) ? 0 : userName.hashCode());
@@ -76,7 +76,10 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!lastLogin.equals(other.lastLogin))
 		return false;
-	if (roleId != other.roleId)
+	if (roleIds == null) {
+		if (other.roleIds != null)
+			return false;
+	} else if (!roleIds.equals(other.roleIds))
 		return false;
 	if (userEmail == null) {
 		if (other.userEmail != null)
@@ -121,11 +124,11 @@ public int getDepartId() {
 public void setDepartId(int departId) {
 	this.departId = departId;
 }
-public int getRoleId() {
-	return roleId;
+public String getRoleIds() {
+	return roleIds;
 }
-public void setRoleId(int roleId) {
-	this.roleId = roleId;
+public void setRoleIds(String roleIds) {
+	this.roleIds = roleIds;
 }
 public String getUserName() {
 	return userName;
@@ -172,7 +175,7 @@ public void setLastLogin(Date lastLogin) {
 public static long getSerialversionuid() {
 	return serialVersionUID;
 }
-
+   
 
    
 }

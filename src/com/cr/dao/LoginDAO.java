@@ -23,14 +23,14 @@ public class LoginDAO {
 	public User loginInfo(User user) throws SQLException{
 		
 		
-		String sql = "select userId,departId,roleId,userName,userPwd,userRealname,userEmail,userSex,userState,lastLogin from tb_user where userName = ? and userPwd = ?";
+		String sql = "select userId,departId,roleIds,userName,userPwd,userRealname,userEmail,userSex,userState,lastLogin from tb_user where userName = ? and userPwd = ?";
 		 try {
 				ps = con.prepareStatement(sql);
 				ps.setString(1, user.getUserName());
 				ps.setString(2, user.getUserPwd());
 				 rs = ps.executeQuery();
 				 if(rs.next()){
-					user = new User(rs.getInt("userId"), rs.getInt("departId"),rs.getInt("roleId"), rs.getString("userName"), rs.getString("userPwd"), rs.getString("userRealname"),rs.getString("userEmail"), rs.getString("userSex"), rs.getInt("userState"),rs.getDate("lastLogin"));
+					user = new User(rs.getInt("userId"), rs.getInt("departId"),rs.getString("roleIds"), rs.getString("userName"), rs.getString("userPwd"), rs.getString("userRealname"),rs.getString("userEmail"), rs.getString("userSex"), rs.getInt("userState"),rs.getDate("lastLogin"));
 				 }
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -45,7 +45,7 @@ public class LoginDAO {
 	
 	
 	public void  saveUser (User user) throws SQLException{
-		String sql ="insert into tb_user(userId,userName,userPwd,userRealname,userEmail,userState,departId,roleId) values(seq_user.nextval,?,?,?,?,?,?,?)";
+		String sql ="insert into tb_user(userId,userName,userPwd,userRealname,userEmail,userState,departId,roleIds) values(seq_user.nextval,?,?,?,?,?,?,?)";
 		 try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, user.getUserName());
@@ -54,7 +54,7 @@ public class LoginDAO {
 			ps.setString(4, user.getUserEmail());
 			ps.setInt(5, user.getUserState());
 			ps.setInt(6, user.getDepartId());
-			ps.setInt(7, user.getRoleId());
+			ps.setString(7, user.getRoleIds());
 			
 			 ps.execute();
 		} catch (SQLException e) {

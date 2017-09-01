@@ -19,7 +19,7 @@ public class LoginTest {
 		user.setUserEmail("1234354@qq.com");
 		user.setUserState(1);
 		user.setDepartId(33333);
-		user.setRoleId(110);
+		user.setRoleIds("110");
 		
 		ld.saveUser(user);
 		
