@@ -22,6 +22,7 @@ public class RoleAddServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		         System.out.println("--------------");
 		
 				//解决乱码
 				req.setCharacterEncoding("utf-8");
@@ -29,13 +30,19 @@ public class RoleAddServlet extends HttpServlet {
 				
 				String roleName = req.getParameter("title");
 				int roleState = Integer.parseInt(req.getParameter("status")) ;
-				String roleRight = req.getParameter("groups");
+//				String roleRight = req.getParameter("groups");
+				String[] groups = req.getParameterValues("group[]");
+				String right = "";
+				for (int i = 0; i < groups.length; i++) {
+					System.out.println(groups[i]);
+					right=right+","+groups[i];
+				}
 				
 				Role role = new Role();
 //				role.setRoleId(roleId);
 				role.setRoleName(roleName);
 				role.setRoleState(roleState);
-				role.setRoleRight(roleRight);
+				role.setRoleRight(right);
 				
 				RoleDAO rd = new RoleDAO();
 				

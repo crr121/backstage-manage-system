@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="Js/common.js"></script>
     <script type="text/javascript" src="MyJs/roleIndex.js"></script>
     <script type="text/javascript" src="MyJs/jquery-1.8.3.js"></script>
-    <script type="text/javascript" src="MyJs.role.js"></script>
+    <script type="text/javascript" src="MyJs/role.js"></script>
 
     <style type="text/css">
         body {
@@ -43,11 +43,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
   </head>
   
-  <body>
+  <body onload="sendRoleAjax();">
     
     角色名称：
     <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary" id="roleSearch" onclick="sendRoleAjax();">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" onclick="roleSearch();">新增角色</button>
+    <button type="submit" class="btn btn-primary" id="roleSearch"  >查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" onclick="roleSearch();">新增角色</button>
 
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td>5</td>
             <td>管理员</td>
             <td>1</td>
-            <td><a href="Role/edit.jsp">编辑</a></td>
+            <td id="roleid"><a href="Rode/edit.jsp" >修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Role/index.jsp"   >删除</a> </td> 
         </tr></table>
     </tbody>
 	     

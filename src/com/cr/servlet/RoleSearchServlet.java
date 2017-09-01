@@ -27,7 +27,8 @@ public class RoleSearchServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-			//解决乱码
+		   alert("hello");
+		//解决乱码
 			req.setCharacterEncoding("utf-8");
 			resp.setCharacterEncoding("utf-8");
 			
@@ -38,6 +39,10 @@ public class RoleSearchServlet extends HttpServlet {
 			RoleDAO rd = new RoleDAO();
 			try {
 				List<Role> roles = rd.searchRole(s);
+				
+				for (Role role : roles) {
+					System.out.println(role);
+				}
 				//组装成JSON数据
 				String roleInfo = new Gson().toJson(roles);
 				
@@ -49,6 +54,10 @@ public class RoleSearchServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			
+	}
+	private void alert(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

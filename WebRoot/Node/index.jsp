@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td >5</td>
             <td>管理员</td>
             <td>1</td>
-            <td id="nodeid"><a href="Node/edit.jsp" onclick="clickNodeId();">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Node/index.jsp"   >删除</a> </td> 
+            <td id="nodeid"><a href="Node/edit.jsp" >修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Node/index.jsp"   >删除</a> </td> 
          </tr>
     </tbody>
 </table>
