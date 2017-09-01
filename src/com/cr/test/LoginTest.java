@@ -1,6 +1,7 @@
 package com.cr.test;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -25,6 +26,15 @@ public class LoginTest {
 		
 //		System.out.println(user);
 		
+		
+	}
+	
+	@Test
+	public void testSearch() throws SQLException{
+		List<User> users = ld.userSearch("");
+		for (User user : users) {
+			System.out.println(user);
+		}
 		
 	}
 }

@@ -27,3 +27,23 @@ function sendNodeAjax(){
 	},"json");
 	
 };
+
+//index.jsp 查询
+
+function searchAll (){
+	$.post("userSearchServlet.do",{"username":'',"random":Math.random()},function(data){
+//		alert(data);
+		$.each(data,function(index,user){
+			$(".userBody").append("<tr><td >"+user.userId+"</td>" +
+					"<td>"+user.userName+"</td>" +
+							"<td>"+user.userRealname+"</td>" +
+									"<td ><a href='User/edit.jsp' >修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='User/index.jsp' >删除</a></td></tr>");
+		});
+	},"json");
+	
+}
+
+
+
+
+

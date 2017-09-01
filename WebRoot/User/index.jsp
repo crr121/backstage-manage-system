@@ -19,6 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="Js/bootstrap.js"></script>
     <script type="text/javascript" src="Js/ckform.js"></script>
     <script type="text/javascript" src="Js/common.js"></script>
+    <script type="text/javascript" src="MyJs/user.js"></script>
 
  
 
@@ -43,8 +44,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
   </head>
   
-  <body>
-    <form class="form-inline definewidth m20" action="index.jsp" method="get">    
+  <body onload ="searchAll();">
+    <form class="form-inline definewidth m20" action="User/index.jsp" method="get">    
     用户名称：
     <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
@@ -59,7 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th>操作</th>
     </tr>
     </thead>
-	     <tr>
+    <tbody class="userBody">
+    	<!--  <tr>
             <td>2</td>
             <td>admin</td>
             <td>管理员</td>
@@ -67,7 +69,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td>
                 <a href="User/edit.jsp">编辑</a>                
             </td>
-        </tr>	
+        </tr>	 -->
+    
+    
+    </tbody>
+	    
 </table>
 
   </body>
