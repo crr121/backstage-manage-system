@@ -2,6 +2,7 @@ package com.cr.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,9 +33,14 @@ public class RoleAddServlet extends HttpServlet {
 				int roleState = Integer.parseInt(req.getParameter("status")) ;
 //				String roleRight = req.getParameter("groups");
 				String[] groups = req.getParameterValues("group[]");
+				
+				Enumeration<String> parameterNames = req.getParameterNames();
+				System.out.println("***********************");
+				System.out.println(parameterNames);
+				System.out.println("**************************");
 				String right = "";
 				for (int i = 0; i < groups.length; i++) {
-					System.out.println(groups[i]);
+					System.out.println("++++++++"+groups[i]);
 					right=right+","+groups[i];
 				}
 				

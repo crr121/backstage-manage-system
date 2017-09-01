@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="Js/ckform.js"></script>
     <script type="text/javascript" src="Js/common.js"></script>
     <script type="text/javascript" src="MyJs/user.js"></script>
-    <script type="text/javascript" src="MyJs/role.js"></script>
+ 
 
  
 
@@ -45,8 +45,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
   </head>
   
-  <body onload="sendRoleAjax();">
-    <form action="User/index.jsp" method="post" class="definewidth m20">
+  <body  >
+    <form action="userAddServlet.do" method="post" class="definewidth m20">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
         <td width="10%" class="tableleft">登录名</td>
@@ -71,14 +71,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <input type="radio" name="status" value="0"/> 禁用
         </td>
     </tr>
+    
+    
     <tr>
-        <td class="tableleft" >角色</td>
-        <td  onload="sendRoleAjax();" id="userRole">角色结果</td>
+        <td class="tableleft" >所属部门</td>
+        <td  ><ul  id="userDepart"></ul></td>
     </tr>
+    
+    
+    
     <tr>
-        <td class="tableleft"></td>
+        <td class="tableleft" >所属角色</td>
+        <td  ><ul  id="userRole" ></ul></td>
+    </tr>
+    
+    
+    <tr>
+        <td class="tableleft" ></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button" id="saveid" onclick="test();">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" type="button" id="saveid" >保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>

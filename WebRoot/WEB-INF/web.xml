@@ -25,6 +25,11 @@
     <servlet-name>RoleSearchServlet</servlet-name>
     <servlet-class>com.cr.servlet.RoleSearchServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>UserAddServlet</servlet-name>
+    <servlet-class>com.cr.servlet.UserAddServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -54,6 +59,10 @@
   <servlet-mapping>
     <servlet-name>RoleSearchServlet</servlet-name>
     <url-pattern>/roleSearchServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserAddServlet</servlet-name>
+    <url-pattern>/userAddServlet.do</url-pattern>
   </servlet-mapping>
   
   

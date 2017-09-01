@@ -7,9 +7,12 @@ public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private int  userId;
+	private int departId;
+	private int roleId;
    private String userName;
    private String userPwd;
    private String userRealname;
+   private String userEmail;
    private String userSex;
    private int userState;
    private Date lastLogin;
@@ -17,29 +20,37 @@ public User() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public User(int userId, String userName, String userPwd, String userRealname,
-		String userSex, int userState, Date lastLogin) {
+public User(int userId, int departId, int roleId, String userName,
+		String userPwd, String userRealname, String userEmail, String userSex,
+		int userState, Date lastLogin) {
 	super();
 	this.userId = userId;
+	this.departId = departId;
+	this.roleId = roleId;
 	this.userName = userName;
 	this.userPwd = userPwd;
 	this.userRealname = userRealname;
+	this.userEmail = userEmail;
 	this.userSex = userSex;
 	this.userState = userState;
 	this.lastLogin = lastLogin;
 }
 @Override
 public String toString() {
-	return "User [userId=" + userId + ", userName=" + userName + ", userPwd="
-			+ userPwd + ", userRealname=" + userRealname + ", userSex="
-			+ userSex + ", userState=" + userState + ", lastLogin=" + lastLogin
-			+ "]";
+	return "User [userId=" + userId + ", departId=" + departId + ", roleId="
+			+ roleId + ", userName=" + userName + ", userPwd=" + userPwd
+			+ ", userRealname=" + userRealname + ", userEmail=" + userEmail
+			+ ", userSex=" + userSex + ", userState=" + userState
+			+ ", lastLogin=" + lastLogin + "]";
 }
 @Override
 public int hashCode() {
 	final int prime = 31;
 	int result = 1;
+	result = prime * result + departId;
 	result = prime * result + ((lastLogin == null) ? 0 : lastLogin.hashCode());
+	result = prime * result + roleId;
+	result = prime * result + ((userEmail == null) ? 0 : userEmail.hashCode());
 	result = prime * result + userId;
 	result = prime * result + ((userName == null) ? 0 : userName.hashCode());
 	result = prime * result + ((userPwd == null) ? 0 : userPwd.hashCode());
@@ -58,10 +69,19 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	User other = (User) obj;
+	if (departId != other.departId)
+		return false;
 	if (lastLogin == null) {
 		if (other.lastLogin != null)
 			return false;
 	} else if (!lastLogin.equals(other.lastLogin))
+		return false;
+	if (roleId != other.roleId)
+		return false;
+	if (userEmail == null) {
+		if (other.userEmail != null)
+			return false;
+	} else if (!userEmail.equals(other.userEmail))
 		return false;
 	if (userId != other.userId)
 		return false;
@@ -95,6 +115,18 @@ public int getUserId() {
 public void setUserId(int userId) {
 	this.userId = userId;
 }
+public int getDepartId() {
+	return departId;
+}
+public void setDepartId(int departId) {
+	this.departId = departId;
+}
+public int getRoleId() {
+	return roleId;
+}
+public void setRoleId(int roleId) {
+	this.roleId = roleId;
+}
 public String getUserName() {
 	return userName;
 }
@@ -112,6 +144,12 @@ public String getUserRealname() {
 }
 public void setUserRealname(String userRealname) {
 	this.userRealname = userRealname;
+}
+public String getUserEmail() {
+	return userEmail;
+}
+public void setUserEmail(String userEmail) {
+	this.userEmail = userEmail;
 }
 public String getUserSex() {
 	return userSex;
@@ -135,4 +173,6 @@ public static long getSerialversionuid() {
 	return serialVersionUID;
 }
 
+
+   
 }

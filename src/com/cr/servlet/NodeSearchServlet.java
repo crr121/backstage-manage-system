@@ -38,6 +38,9 @@ public class NodeSearchServlet extends HttpServlet {
 			DepartDAO dd = 	new DepartDAO();
 			try {
 				List<Depart> departs = dd.searchDepart(s);
+				for (Depart depart : departs) {
+					System.out.println(depart);
+				}
 				//组装成JSON数据
 				String departInfo = new Gson().toJson(departs);
 				
