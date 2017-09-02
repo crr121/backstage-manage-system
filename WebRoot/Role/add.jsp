@@ -61,61 +61,61 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <ul>
             	   
                	     <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='100' id='list1' onclick="test();"/>部门管理</label>
-			                <ul>
+			               <!--  <ul>
 			                	<li><label class='checkbox inline'><input type='checkbox' name='node[]' value='1' />部门查询</label>
 			               	    <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='2' />部门添加</label>
 			                    <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='3' />部门删除</label>
 			                    <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='4' />部门修改</label>
-			                </ul>
+			                </ul> -->
             	    </li>
                
                
                     <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='101' id='list'/>角色管理</label>
-			                <ul>
+			              <!--   <ul>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='5' />角色列表</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='6' />角色添加</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='7' />角色编辑</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='8' />角色删除</label>
-			                </ul>
+			                </ul> -->
                	    </li>	
 
 
                
                    <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='103' />用户管理</label>
-			                <ul>
+			               <!--  <ul>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='9' />用户列表</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='10' />用户添加</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='11' />用户编辑</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='12' />用户删除</label>
-			                </ul>
+			                </ul> -->
                    </li>
                 
                 
                	   <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='104' />模块管理</label>
-			                <ul>
+			            <!--     <ul>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='13' />模块列表</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='14' />模块新增</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='15' />模块编辑</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='16' />模块删除</label>
-			                </ul>
+			                </ul> -->
                    </li>
                 
                 
                     <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='105' />公告管理</label>
-               			    <ul>
+               			  <!--   <ul>
                			        <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='17' />发布公告</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='18' />修改公告</label>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='19' />删除公告</label>
-				            </ul>
+				            </ul> -->
 				    </li>
                 
                 
                 
                 
 	                <li><label class='checkbox inline'><input type='checkbox' name='group[]' value='106' />系统设置</label>
-			                <ul>
+			              <!--   <ul>
 				                <li><label class='checkbox inline'><input type='checkbox' name='node[]' value='20' />密码重置</label>
-			                </ul>
+			                </ul> -->
 		            </li>
                 
               	  

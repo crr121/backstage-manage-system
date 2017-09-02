@@ -31,5 +31,13 @@ public class RoleTest {
 		}
 		
 	}
+	
+	@Test
+	public void testSearchRight() throws SQLException{
+		String[] searchRoleRight = rd.searchRoleRight(13);
+		for (String string : searchRoleRight) {
+			System.out.println(string);
+		}
+	}
 
 }

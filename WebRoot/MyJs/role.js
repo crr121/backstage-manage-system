@@ -1,3 +1,22 @@
+//查询模块
+//window.onload=sendModuleAjax;
+//角色界面的模块查询
+function sendModuleAjax(){
+
+	$.post("moduleSearchServlet.do",{"rolename":'',"random":Math.random()},function(data){
+	alert(7888);
+	alert(data);
+		$.each(data,function(index,module){
+//			alert(12);
+			$("#moduleSearch").append("<li><label class='checkbox inline'><input type='checkbox' name='node[]' value='"+module.moduleId+"' />"+module.moduleName+"</label>");
+		});
+	},"json");
+
+};
+
+
+
+
 //获取复选框的值
 function checkboxResult(){
 	

@@ -2,11 +2,8 @@ window.onload=function (){sendRoleAjax();sendNodeAjax();};
 //用户界面的角色查询
 function sendRoleAjax(){
 
-	$.post("roleSearchServlet.do",{"rolename":'',"random":Math.random()},function(data){
-	/*	alert(7888);
-	alert(data);*/
+	$.post("roleSearchServlet.do",{"random":Math.random()},function(data){
 		$.each(data,function(index,role){
-//			alert(12);
 			$("#userRole").append(" <li><label class='checkbox inline'><input type='checkbox' name='roleGroup[]' value="+role.roleId+" id='list1' onclick='test();'/>"+role.roleName+"</label>");
 		});
 	},"json");

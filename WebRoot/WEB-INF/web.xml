@@ -33,6 +33,11 @@
     <servlet-name>UserSearchServlet</servlet-name>
     <servlet-class>com.cr.servlet.UserSearchServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ModuleSearchServlet</servlet-name>
+    <servlet-class>com.cr.servlet.ModuleSearchServlet</servlet-class>
+  </servlet>
+
 
   <filter>
   	<filter-name>loginFilter</filter-name>
@@ -76,6 +81,10 @@
   <servlet-mapping>
     <servlet-name>UserSearchServlet</servlet-name>
     <url-pattern>/userSearchServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModuleSearchServlet</servlet-name>
+    <url-pattern>/moduleSearchServlet.do</url-pattern>
   </servlet-mapping>
   
   

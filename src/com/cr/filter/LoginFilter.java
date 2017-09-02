@@ -18,11 +18,17 @@ public class LoginFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
+		
+		
+		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpSession session = request.getSession();
 		HttpServletResponse response = (HttpServletResponse) resp;
+		
+		
 		//需要到session中获取user，
 				Object obj = session.getAttribute(SystemUtil.SYSUSER);
+				System.out.println(SystemUtil.SYSUSER);
 				if(obj!=null){
 					//如果不为null,则放行
 					chain.doFilter(request, response);
@@ -31,13 +37,10 @@ public class LoginFilter implements Filter{
 				//如果为null,则重定向到login.jsp
 				response.sendRedirect("Public/login.jsp");
 			}
-		
 
 	@Override
 	public void destroy() {
-		
 	}
-
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		

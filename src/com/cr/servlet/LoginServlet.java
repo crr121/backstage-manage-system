@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.cr.dao.LoginDAO;
+import com.cr.dao.RoleDAO;
 import com.cr.entity.User;
 
 
@@ -50,7 +51,16 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = req.getSession();
 			if(loginInfo!=null){
 				session.setAttribute(com.cr.util.SystemUtil.SYSUSER, loginInfo);
-//				System.out.println(loginInfo);
+				System.out.println("登陆信息========"+loginInfo);
+				
+				int roleIds = Integer.parseInt("loginInfo.getRoleIds()");
+				System.out.println("角色信息=========="+roleIds);
+				
+				//根据roleid查询对应的rightid
+				RoleDAO rd = new RoleDAO();
+				String[] rights = rd.searchRoleRight(roleIds);
+				
+				
 				resp.sendRedirect(req.getContextPath()+"/index.jsp");
 			}else{
 				out.print("您的密码或账户名输入有误！！！");

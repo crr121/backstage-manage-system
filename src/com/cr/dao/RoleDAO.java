@@ -68,5 +68,41 @@ public class RoleDAO {
 			}
 			return roles;
 		}
-	
+		
+		
+		/**
+		 * 根据roleid查询对应的权限id
+		 * @param roleId 角色id
+		 * @throws SQLException
+		 */
+		public String[] searchRoleRight (int roleId) throws SQLException{
+			String sql = "select roleRight from tb_role where roleId = ?";
+			try {
+				String roleRight;
+				ps = con.prepareStatement(sql);
+				ps.setInt(1, roleId);
+				rs = ps.executeQuery();
+				while(rs.next()){
+					 roleRight = rs.getString("roleright");
+					 int indexOf = roleRight.indexOf(",")+1;
+					 String roleRights = roleRight.substring(indexOf);
+					 
+					 int[] rightIds = null;
+					 String[] rights = roleRights.split(",");
+					/* for (int i = 0; i < splits.length; i++) {
+						 System.out.println(splits[i]);
+					}*/
+					 return rights;
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally{
+				rs.close();
+				ps.close();
+				con.close();
+			}
+			return null;
+			
+		}
+		
 }
