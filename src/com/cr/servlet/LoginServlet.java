@@ -56,9 +56,9 @@ public class LoginServlet extends HttpServlet {
 				int roleIds = Integer.parseInt("loginInfo.getRoleIds()");
 				System.out.println("角色信息=========="+roleIds);
 				
-				//根据roleid查询对应的rightid
+			/*	//根据roleid查询对应的rightid
 				RoleDAO rd = new RoleDAO();
-				String[] rights = rd.searchRoleRight(roleIds);
+				String[] rights = rd.searchRoleRight(roleIds);*/
 				
 				
 				resp.sendRedirect(req.getContextPath()+"/index.jsp");
