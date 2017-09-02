@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
 			if(loginInfo!=null){
 				session.setAttribute(com.cr.util.SystemUtil.SYSUSER, loginInfo);
 //				System.out.println(loginInfo);
-				resp.sendRedirect("index.jsp");
+				resp.sendRedirect(req.getContextPath()+"/index.jsp");
 			}else{
 				out.print("您的密码或账户名输入有误！！！");
 			}
