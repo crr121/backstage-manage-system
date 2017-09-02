@@ -45,28 +45,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <form action="Menu/index.jsp" method="post" class="definewidth m20">
 <table class="table table-bordered table-hover m10">
-    <tr>
+   <!--  <tr>
         <td width="10%" class="tableleft">上级</td>
         <td>
             <select name="parentid">
             <option value="0">一级菜单</option><option value='1'   />&nbsp;系统管理</option><option value='7'   />&nbsp;明信片管理</option>            </select>
         </td>
-    </tr>
+    </tr> -->
     <tr>
-        <td class="tableleft">名称</td>
+        <td class="tableleft">模块编号</td>
         <td><input type="text" name="name"/></td>
     </tr>
     <tr>
-        <td class="tableleft">Group</td>
+        <td class="tableleft">模块名称</td>
         <td><input type="text" name="group"/></td>
     </tr>
     <tr>
-        <td class="tableleft">Model</td>
+        <td class="tableleft">模块地址</td>
         <td><input type="text" name="module"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">Action</td>
-        <td><input type="text" name="action"/></td>
     </tr>
     <tr>
         <td class="tableleft">备注</td>

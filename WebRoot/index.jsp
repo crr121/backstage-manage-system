@@ -42,13 +42,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="assets/js/common/main-min.js"></script>
 <script type="text/javascript" src="assets/js/config-min.js"></script>
 <script>
-    BUI.use('common/main',function(){
-        var config = [{id:'1',menu:[{text:'系统管理',items:[{id:'12',text:'部门管理',href:'Node/index.jsp'},{id:'3',text:'角色管理',href:'Role/index.jsp'},{id:'4',text:'用户管理',href:'User/index.jsp'},{id:'6',text:'模块管理',href:'Menu/index.jsp'},{id:'8',text:'公告管理',href:'Declare/index.jsp'},
-                                                        {id:'10',text:'密码重置',href:'PwdReset/index.jsp'}]}]},{id:'7',homePage : '9',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:'Node/index.jsp'}]}]}];
-        new PageUtil.MainPage({
-            modulesConfig : config
-        });
+BUI.use('common/main',function(){
+    var config = [{id:'1',menu:[{text:'系统管理',items:[{id:'12',text:'部门管理',href:'Node/index.jsp'},{id:'3',text:'角色管理',href:'Role/index.jsp'},{id:'4',text:'用户管理',href:'User/index.jsp'},{id:'6',text:'模块管理',href:'Menu/index.jsp'},{id:'8',text:'公告管理',href:'Declare/index.jsp'},
+                                                    {id:'10',text:'密码重置',href:'PwdReset/index.jsp'}]}]},{id:'7',homePage : '9',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:'Node/index.jsp'}]}]}];
+    new PageUtil.MainPage({
+        modulesConfig : config
     });
+});
+
 </script>
 <div style="text-align:center;">
 </div>

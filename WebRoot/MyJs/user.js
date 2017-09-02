@@ -37,6 +37,7 @@ function searchAll (){
 			$(".userBody").append("<tr><td >"+user.userId+"</td>" +
 					"<td>"+user.userName+"</td>" +
 							"<td>"+user.userRealname+"</td>" +
+							    "<td>"+user.lastLogin+"</td>" +
 									"<td ><a href='User/edit.jsp' >修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='User/index.jsp' >删除</a></td></tr>");
 		});
 	},"json");
